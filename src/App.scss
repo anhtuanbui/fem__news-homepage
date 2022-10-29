@@ -1,18 +1,38 @@
-@import '/src/shared/variables.scss';
+@import "/src/shared/variables.scss";
 
-h1, h2, h3, h4, h5, h6, p {
-    margin: 0;
-    padding: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
 }
 
 .App {
-    font-size: $typography__body--font-size;
-    font-family: $typography__font-family;
-    font-weight: $typography__font-weight--regular;
+  font-size: $typography__body--font-size;
+  font-family: $typography__font-family;
+  font-weight: $typography__font-weight--regular;
+  overflow-x: hidden;
 }
 
 .container {
-    width: $width__desktop;
-    max-width: 100%;
-    margin: auto;
+  width: $width__desktop;
+  max-width: 100%;
+  margin: auto;
+  box-sizing: border-box;
+
+  @include desktop {
+    padding: 0 1.25rem;
+  }
+
+  @include tablet {
+    padding: 0 1rem;
+  }
+
+  @include mobile {
+    padding: 0 0.75rem;
+  }
 }

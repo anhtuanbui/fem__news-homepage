@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import main from '../../assets/images/image-web-3-desktop.jpg';
+import mainMobile from '../../assets/images/image-web-3-mobile.jpg';
 import './Intro.scss';
 export class Intro extends Component {
     render() {
@@ -7,7 +8,10 @@ export class Intro extends Component {
             <div className='intro'>
                 <div className="intro-left">
                     <div className="intro-left__img">
-                        <img src={main} alt="web 3 desktop" />
+                        <picture>
+                            <source media="(max-width: 375px)" srcSet={mainMobile} />
+                            <img src={main} alt="web 3 desktop" />
+                        </picture>
                     </div>
                     <div className="intro-left__info">
                         <div className="intro-left__info--text">

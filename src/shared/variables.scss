@@ -18,7 +18,18 @@ $typography__font-weight--heavy: 800;
 
 $typography__font-family: "Inter", sans-serif;
 
-$breakpoints: (
-    mobile: $width__mobile,
-    desktop: $width__desktop
-) !default;
+@mixin mobile {
+  @media screen and (max-width: $width__mobile) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (max-width: 768px) and (min-width: $width__mobile) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (max-width: $width__desktop) {
+    @content;
+  }
+}

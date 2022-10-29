@@ -5,6 +5,11 @@
   gap: 2rem;
   margin-top: 4rem;
 
+  @include mobile {
+    flex-direction: column;
+    margin-bottom: 3rem;
+  }
+
   &__cards {
     display: flex;
     flex: 1 1 0;

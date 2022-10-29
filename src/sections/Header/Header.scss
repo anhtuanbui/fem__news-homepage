@@ -5,12 +5,19 @@
   justify-content: space-between;
   align-items: center;
   padding: 3rem 0;
+  position: relative;
 }
 
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   ul {
     display: flex;
     list-style: none;
+    z-index: 800;
+
     li {
       margin-left: 30px;
       a {
@@ -22,5 +29,81 @@
         }
       }
     }
+
+    @include mobile {
+      display: flex;
+      visibility: hidden;
+      position: absolute;
+      padding-left: 0;
+      padding-top: 40%;
+      margin-top: 0;
+      box-sizing: border-box;
+      flex-direction: column;
+      right: -100%;
+      top: 0;
+      transition: 0.4s;
+      height: 100vh;
+      width: 70%;
+      background-color: $color__neutral--off-white;
+
+      li {
+        a {
+          color: $color__neutral--very-dark-blue;
+          font-size: 1.25rem;
+          line-height: 3rem;
+        }
+      }
+    }
+  }
+
+  .hamburger-menu {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1000;
+    transition: 0.4s;
+    cursor: pointer;
+
+    @include mobile {
+      visibility: visible;
+      position: static;
+    }
+  }
+}
+
+.navbar-show {
+  right: -15px !important;
+  visibility: visible !important;
+}
+
+.overlay {
+  z-index: 500;
+  background-color: $color__neutral--very-dark-blue;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 50%;
+}
+
+.slideIn {
+  animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
   }
 }
