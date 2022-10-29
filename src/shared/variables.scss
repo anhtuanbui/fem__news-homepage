@@ -1,0 +1,24 @@
+$width__mobile: 375px;
+$width__desktop: 1440px;
+
+$color__text: black;
+$color__primary--soft-orange: hsl(35, 77%, 62%);
+$color__primary--soft-red: hsl(5, 85%, 63%);
+
+$color__neutral--off-white: hsl(36, 100%, 99%);
+$color__neutral--grayish-blue: hsl(233, 8%, 79%);
+$color__neutral--dark-grayish-blue: hsl(236, 13%, 42%);
+$color__neutral--very-dark-blue: hsl(240, 100%, 5%);
+
+$typography__body--font-size: 15px;
+
+$typography__font-weight--regular: 400;
+$typography__font-weight--bold: 700;
+$typography__font-weight--heavy: 800;
+
+$typography__font-family: "Inter", sans-serif;
+
+$breakpoints: (
+    mobile: $width__mobile,
+    desktop: $width__desktop
+) !default;

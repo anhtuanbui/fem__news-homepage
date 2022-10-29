@@ -1,0 +1,96 @@
+@import "/src/shared/variables.scss";
+
+.intro {
+  display: flex;
+  gap: 2rem;
+}
+
+.intro-left {
+  flex: 2 1 70%;
+
+  &__img {
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    display: flex;
+    margin-top: 2rem;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    &--text {
+      flex: 1 1 0;
+      h1 {
+        font-size: 3rem;
+        font-weight: $typography__font-weight--heavy;
+        color: $color__neutral--very-dark-blue;
+        line-height: 1;
+      }
+    }
+    &--info {
+      flex: 1 1 0;
+      p {
+        font-weight: $typography__font-weight--regular;
+        color: $color__neutral--dark-grayish-blue;
+        line-height: 1.5;
+      }
+
+      button {
+        background-color: $color__primary--soft-red;
+        color: $color__neutral--off-white;
+        border: none;
+        padding: 1rem 2rem;
+        font-weight: $typography__font-weight--bold;
+        letter-spacing: 0.2rem;
+        margin-top: 2rem;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          background-color: $color__primary--soft-orange;
+        }
+      }
+    }
+  }
+}
+
+.intro-right {
+  flex: 1 1 30%;
+  background-color: $color__neutral--very-dark-blue;
+  padding: 0 1.5rem;
+
+  h2 {
+    color: $color__primary--soft-orange;
+    font-weight: $typography__font-weight--bold;
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+
+  &__cards {
+    border-bottom: 1px solid $color__neutral--dark-grayish-blue;
+
+    h3 {
+      color: $color__neutral--off-white;
+      font-weight: $typography__font-weight--bold;
+      margin-bottom: 0.5rem;
+      margin-top: 2rem;
+      cursor: pointer;
+
+      &:hover {
+        color: $color__primary--soft-orange;
+      }
+    }
+
+    p {
+      color: $color__neutral--dark-grayish-blue;
+      margin-bottom: 2rem;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}

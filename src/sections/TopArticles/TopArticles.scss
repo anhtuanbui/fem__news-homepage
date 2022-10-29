@@ -1,0 +1,44 @@
+@import "/src/shared/variables.scss";
+
+.top-articles {
+  display: flex;
+  gap: 2rem;
+  margin-top: 4rem;
+
+  &__cards {
+    display: flex;
+    flex: 1 1 0;
+
+    &--img {
+      margin-right: 1rem;
+      flex: 1 1 0;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &--info {
+        flex: 3 1 0;
+      h2 {
+        color: $color__neutral--grayish-blue;
+        margin-bottom: 0.5rem;
+      }
+
+      h3 {
+        color: $color__neutral--very-dark-blue;
+        margin-bottom: 0.5rem;
+        font-weight: $typography__font-weight--heavy;
+        cursor: pointer;
+
+        &:hover {
+          color: $color__primary--soft-red;
+        }
+      }
+
+      p {
+        color: $color__neutral--dark-grayish-blue;
+      }
+    }
+  }
+}

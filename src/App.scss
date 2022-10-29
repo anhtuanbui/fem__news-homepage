@@ -1,0 +1,18 @@
+@import '/src/shared/variables.scss';
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+    font-size: $typography__body--font-size;
+    font-family: $typography__font-family;
+    font-weight: $typography__font-weight--regular;
+}
+
+.container {
+    width: $width__desktop;
+    max-width: 100%;
+    margin: auto;
+}
